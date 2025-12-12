@@ -207,9 +207,10 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 3001;
+const HOST = process.env.HOST || 'localhost';
 
-httpServer.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+httpServer.listen(PORT, HOST, () => {
+  console.log(`🚀 Server running on http://${HOST}:${PORT}`);
   console.log(`📹 Video meeting server ready`);
 });
 
